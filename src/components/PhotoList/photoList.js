@@ -2,45 +2,45 @@ import React, { useState } from 'react';
 import Modal from '../Modal';
 
 
-const PhotoList = ({ category }) => {
+const PhotoList = ({ deployedWebsite }) => {
   
   const [currentPhoto, setCurrentPhoto] = useState();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const [photos] = useState([
     {
-      name: 'Grocery aisle',
-      category: 'commercial',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      name: 'Boot Camp Blues',
+      deployedWebsite: 'https://evening-cliffs-89328.herokuapp.com/',
+      gitRepo: 'https://github.com/cclund444/bootcampblues.git',
     },
     {
-      name: 'Grocery booth',
-      category: 'commercial',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      name: 'Budget Tracker',
+      deployedWebsite: 'https://guarded-mountain-60579.herokuapp.com/',
+      gitRepo: 'https://github.com/nicoguarino/budget-tracker.git',
     },
     {
-      name: 'Building exterior',
-      category: 'commercial',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      name: 'Daily Moods',
+      deployedWebsite: 'https://nicoguarino.github.io/dailymoods/',
+      gitRepo: 'https://github.com/nicoguarino/dailymoods.git',
     },
     {
-      name: 'Restaurant table',
-      category: 'commercial',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      name: 'Just a Tech Blog',
+      deployedWebsite: 'https://gentle-brushlands-46188.herokuapp.com/',
+      gitRepo: 'https://github.com/nicoguarino/tech-blog.git',
     },
     {
-      name: 'Cafe interior',
-      category: 'commercial',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      name: 'Note Taker',
+      deployedWebsite: 'https://nicoguarino-note-taker.herokuapp.com/notes',
+      gitRepo: 'https://github.com/nicoguarino/note-taker.git',
     },
     {
-      name: 'Cat green eyes',
-      category: 'portraits',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      name: 'Workday Scheduler',
+      deployedWebsite: 'https://nicoguarino.github.io/workday-scheduler/',
+      gitRepo: 'https://github.com/nicoguarino/workday-scheduler.git',
     },
   ]);
 
-  const currentPhotos = photos.filter((photo) => photo.category === category);
+  const currentPhotos = photos.filter((photo) => photo.deployedWebsite === deployedWebsite);
  
 
   const toggleModal = (image, i) => {
