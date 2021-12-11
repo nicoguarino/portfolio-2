@@ -57,11 +57,13 @@ const PhotoList = ({ deployedWebsite }) => {
       <div className="flex-row">
         {currentPhotos.map((image, i) => (
           <img
-            src={require(`../../assets/small/${i}.PNG`).default}
+            src={require(`../../assets/portfolioPhotos/${i}.PNG`).default}
             alt={image.name}
             className="img-thumbnail mx-1"
             onClick={() => toggleModal(image, i)}
             key={image.name}
+            deployedWebsite= {image.deployedWebsite}
+            gitRepo={image.gitRepo}
           />
         ))}
       </div>

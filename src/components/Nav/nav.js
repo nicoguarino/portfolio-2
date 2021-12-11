@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
-import { capitalizeFirstLetter } from '../../utils/helpers';
 
-function Nav() {
+function Nav(props) {
+    const tabs = ['About', 'Contact', 'Portfolio', 'Resume'];
 
     useEffect(() => {
         document.title = 'Nico Guarino Portfolio';
     });
+
 
     return (
         <header className="flex-row px-1">
@@ -16,26 +17,20 @@ function Nav() {
             </h2>
             <nav>
                 <ul className="flex-row">
-                    <li className="mx-2">
-                        <a data-testid="about" href="#about">
-                            About me
-                        </a>
-                    </li>
-                    <li className="mx-2">
-                        <a data-testid="contact" href="#contact">
-                            Contact
-                        </a>
-                    </li>
-                    <li className="mx-2">
-                        <a data-testid="portfolio" href="#portfolio">
-                            Portfolio
-                        </a>
-                    </li>
-                    <li className="mx-2">
-                        <a data-testid="resume" href="#resume">
-                            Resume
-                        </a>
-                    </li>
+                    {tabs.map(tab => (
+                        <li className="mx-2" key={tab}>
+                            <a
+                                href={'#' + tab.toLowerCase()}
+                                onClick={() => props.handlePageChange(tab)}
+                                className={
+                                    props.currentPage === tab ? 'nav-link active' : 'nav-link'
+                                }
+                            >
+                                {tab}
+                            </a>
+                        </li>
+                    ))}
+
                 </ul>
             </nav>
         </header>
