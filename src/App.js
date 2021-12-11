@@ -3,6 +3,7 @@ import Nav from './components/Nav/nav';
 import About from './components/About/about';
 import Portfolio from './components/Portfolio/portfolio';
 import Contact from './components/Contact/contact';
+import Resume from './components/Resume/resume';
 
 function App() {
    
@@ -17,6 +18,8 @@ function App() {
          return <Portfolio/>;
        case 'Contact':
          return <Contact />;
+        case 'Resume':
+          return <Resume />;
        default:
          return <About />;
      }

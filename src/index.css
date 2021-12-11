@@ -293,3 +293,13 @@ a {
 .navActive {
   color: var(--secondary);
 }
+
+iframe {
+  width: 45%;
+  height: 1100px;
+}
+
+#portfolio-photos{
+ width: 100px;
+ height: 100px;
+}
