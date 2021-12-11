@@ -5,7 +5,7 @@ main {
   padding: 50px 30px;
 }
 :root {
-  --primary: #8c54ff;
+  --primary: rgb(187, 123, 123);
   --secondary: #F3A847;
   --tertiary: #B12704;
   --light: #fafafa;
@@ -36,7 +36,7 @@ body {
   letter-spacing: .1em;
   background: var(--dark);
   color: var(--light);
-  font-family: 'Poiret One', cursive;
+  font-family: 'Times New Roman', Times, serif;
 
 }
 
@@ -46,7 +46,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -299,7 +299,3 @@ iframe {
   height: 1100px;
 }
 
-#portfolio-photos{
- width: 100px;
- height: 100px;
-}

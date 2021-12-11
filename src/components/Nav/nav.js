@@ -4,7 +4,7 @@ function Nav(props) {
     const tabs = ['About', 'Contact', 'Portfolio', 'Resume'];
 
     useEffect(() => {
-        document.title = 'Nico Guarino Portfolio';
+        document.title = "Nico Guarino's Portfolio";
     });
 
 
@@ -12,7 +12,7 @@ function Nav(props) {
         <header className="flex-row px-1">
             <h2>
                 <a data-testid="link" href="/">
-                    Nico Guarino Portfolio
+                    Nico Guarino's Portfolio
                 </a>
             </h2>
             <nav>

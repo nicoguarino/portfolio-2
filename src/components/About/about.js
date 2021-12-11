@@ -5,11 +5,11 @@ function About() {
 
     return (
         <section className="my-5" >
-            <h1 id="about">Who am I?</h1>
-            <img src={aboutPhoto} className="my-2" style={{ width: "200px", height: '200px' }} alt="cover" />
+            <h1 id="about">A Little About Myself?</h1>
+            <img src={aboutPhoto} className="my-2" style={{ width: "500px", height: '500px' }} alt="cover" />
             <div className="my-2">
             <p>
-                <span class="tab"></span>I was born and raised in the "Biggest Little City" Reno, Nevada.
+                I was born and raised in the "Biggest Little City" Reno, Nevada.
                 Reno has a bit of everything. Within minutes of driving, you can see mountains forests, desert trails, and rivers.
                 Going on hikes is one of my favorite activites to do both here in Reno and 40 minutes away at the second largest clear water lake, Lake Tahoe.
                 Growing up, I did a lot of adventuring outside and today I continue to do just that.
@@ -17,7 +17,7 @@ function About() {
                 <br />
 
                 <br />
-                <span class="tab"></span>In the craziness of 2020, my long time fiancee became my wife. 
+                In the craziness of 2020, my long time fiancee became my wife. 
                 We were fortunate to tie the knot on the beach in Maui with close family. 
                 It was one of the best days of my life until early June of this year when I became a father to a beautiful baby girl.
                 With the birth of my daughter, I wanted to create a better life for my family and by becoming a full stack developer, I hope to achieve that within the next few years. 
