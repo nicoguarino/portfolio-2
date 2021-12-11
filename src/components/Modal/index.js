@@ -7,7 +7,7 @@ const Modal = ({ onClose, currentPhoto }) => {
         <div className="modalBackdrop">
             <div className="modalContainer">
                 <h3 className="modalTitle">{name}</h3>
-                <img src={require(`../../assets/portfolioPhotos/${index}.PNG`).default} />
+                <img src={require(`../../assets/portfolioPhotos/${index}.PNG`).default} alt={name} />
                 <a href={deployedWebsite}>Deployed Website</a>
                 <a href={gitRepo}>GitHub Repo</a>
                 <button onClick={onClose} type="button">Close this modal</button>

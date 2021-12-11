@@ -40,7 +40,7 @@ const PhotoList = ({ deployedWebsite }) => {
     },
   ]);
 
-  const currentPhotos = photos.filter((photo) => photo.deployedWebsite === deployedWebsite);
+ 
  
 
   const toggleModal = (image, i) => {
@@ -55,7 +55,7 @@ const PhotoList = ({ deployedWebsite }) => {
       )}
 
       <div className="flex-row">
-        {currentPhotos.map((image, i) => (
+        {photos.map((image, i) => (
           <img
             src={require(`../../assets/portfolioPhotos/${i}.PNG`).default}
             alt={image.name}
