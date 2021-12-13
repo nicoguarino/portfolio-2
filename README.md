@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# Nico Guarino Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+- [About](#about)
+- [Getting Started](#getting-started)
+- [Code Sample](#code-sample)
+- [Acknowledgement](#acknowledgement)
+- [Contributing](#contributing)
+- [License](#license)
 
-In the project directory, you can run:
+## About <a name = "about"></a>
 
-### `npm start`
+Nico Guarino's Portfolio-2 website is designed to display current and future work. It has a simplistic layout that displays homework and class projects, contact page, and a current resume. It gives a brief background on the creator and provides contact information to best reach him.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started <a name = "getting-started"></a>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* [Git Hub Pull](https://github.com/nicoguarino/portfolio.git)
+* [Nico Guarino Portfolio Website URL](https://nicoguarino.github.io/portfolio-2/)
 
-### `npm test`
+## Code Sample <a name = "code-sample"></a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Sample Code](https://github.com/nicoguarino/portfolio/blob/main/assests/images/sample_code.png?raw=true "Sample Code")
 
-### `npm run build`
+### Sample Code
+```JSX Sample
+function App() {
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  const [currentPage, setPageChange] = useState('About');
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'About':
+        return <About />;
+      case 'Portfolio':
+        return <Portfolio />;
+      case 'Contact':
+        return <Contact />;
+      case 'Resume':
+        return <Resume />;
+      default:
+        return <About />;
+    }
+  };
 
-### `npm run eject`
+  return (
+    <div>
+      <Nav currentPage={currentPage} setPageChange={setPageChange} />
+      <main>
+        <div>{renderPage(currentPage)}</div>
+      </main>
+      <Footer/>
+    </div>
+  );
+}
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```CSS Sample
+.navActive {
+  color: var(--secondary);
+}
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+iframe {
+  width: 45%;
+  height: 850px;
+}
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+.footer{
+  font-size: 25px;
+  background: #181818;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
+  margin: auto;
+  padding: auto;
+}
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+.footer-content{
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-## Learn More
+.footer-a{
+  font-size: 25px;
+}
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+.contact-container {
+  text-align: center;
+}
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+.form-control {
+  width: 50% !important;
+}
+```
 
-### Code Splitting
+## Authors and acknowledgement <a name = "acknowledgement"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Nico (Filipu) Guarino
 
-### Analyzing the Bundle Size
+## Contributing <a name = "contributing"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Nico Guarino's portfolio-2 website is open for contrubiting, however check with the creator first before making any permanent changes. The creator is opening to creative ideas and tweeking of design, but it must be approved first.
 
-### Making a Progressive Web App
+## License <a name = "license">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+(c) 2021 Nico Guarino
