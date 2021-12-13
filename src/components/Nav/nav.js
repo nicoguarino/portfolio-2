@@ -13,7 +13,7 @@ function Nav(props) {
     return (
         <header className="flex-row px-1">
             <h2>
-                <a data-testid="link" href="/">
+                <a data-testid="link" href="https://nicoguarino.github.io/portfolio-2/">
                     Nico Guarino's Portfolio
                 </a>
             </h2>
