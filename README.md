@@ -20,7 +20,7 @@ Nico Guarino's Portfolio-2 website is designed to display current and future wor
 
 ## Code Sample <a name = "code-sample"></a>
 
-![Sample Code](https://github.com/nicoguarino/portfolio/blob/main/assests/images/sample_code.png?raw=true "Sample Code")
+![Sample Code](https://github.com/nicoguarino/portfolio-2/blob/main/images/sample_code.PNG?raw=true "Sample Code")
 
 ### Sample Code
 ```JSX Sample
