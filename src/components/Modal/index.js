@@ -9,9 +9,9 @@ const Modal = ({ onClose, currentPhoto }) => {
                 <h3 className="modalTitle">{name}</h3>
                 <img src={require(`../../assets/portfolioPhotos/${index}.PNG`).default} alt={name} />
                 <center>
-                <div><a href={deployedWebsite}>Deployed Website</a></div>
+                <div><a href={deployedWebsite} target="_blank">Deployed Website</a></div>
                 
-                <div><a href={gitRepo}>GitHub Repo</a></div>
+                <div><a href={gitRepo} target="_blank">GitHub Repo</a></div>
                
                 <button onClick={onClose} type="button">Close</button>
                 </center>

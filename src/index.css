@@ -5,12 +5,12 @@ main {
   padding: 50px 30px;
 }
 :root {
-  --primary: rgb(187, 123, 123);
-  --secondary: #F3A847;
+  --primary: rgb(175, 125, 192);
+  --secondary: #a06abb;
   --tertiary: #B12704;
   --light: #fafafa;
-  --dark: #000000;
-  --darker: #111111;
+  --dark: #4d4b4b;
+  --darker: #6f6c6c;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
@@ -89,10 +89,12 @@ a {
 
 a:hover {
   text-decoration: underline;
+  color: #a06abb;
 }
 
 header {
-  background: var(--dark);
+  background: #181818;
+  width: 100%;
 }
 
 header a {
@@ -128,10 +130,6 @@ span[role="img"] {
   cursor: default;
 }
 
-form {
-  width: 40%;
-}
-
 input {
   font-size: 1rem;
   padding: 0.25rem;
@@ -152,6 +150,7 @@ li {
 
 nav a:hover {
   text-decoration: none;
+  color: #a06abb;
 }
 
 nav  li {
@@ -173,6 +172,7 @@ textarea {
 }
 
 .flex-row {
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
 }
@@ -236,7 +236,7 @@ textarea {
 }
 
 .img-thumbnail {
-  width: auto;
+  width: 600px;
   height: 300px;
   margin-bottom: 50px;
   cursor: pointer;
@@ -296,6 +296,35 @@ a {
 
 iframe {
   width: 45%;
-  height: 1100px;
+  height: 850px;
 }
 
+.footer{
+  font-size: 25px;
+  background: #181818;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
+  margin: auto;
+  padding: auto;
+}
+
+.footer-content{
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-a{
+  font-size: 25px;
+}
+
+.contact-container {
+  text-align: center;
+}
+
+.form-control {
+  width: 50% !important;
+}

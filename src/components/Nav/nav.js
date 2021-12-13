@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
+import "../../../src/index.css"
 
 function Nav(props) {
+
     const tabs = ['About', 'Contact', 'Portfolio', 'Resume'];
 
     useEffect(() => {
@@ -18,12 +20,14 @@ function Nav(props) {
             <nav>
                 <ul className="flex-row">
                     {tabs.map(tab => (
-                        <li className="mx-2" key={tab}>
+                        <li className='mx-2' key={tab}>
                             <a
                                 href={'#' + tab.toLowerCase()}
-                                onClick={() => props.handlePageChange(tab)}
+                                onClick={() => {
+                                    props.setPageChange(tab)
+                                }}
                                 className={
-                                    props.currentPage === tab ? 'nav-link active' : 'nav-link'
+                                    props.currentPage === tab ? 'nav-link navActive' : 'nav-link'
                                 }
                             >
                                 {tab}
@@ -38,6 +42,3 @@ function Nav(props) {
 }
 
 export default Nav;
-
-
-

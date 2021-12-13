@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
+import "../../../src/index.css"
+import { Form, Container } from 'react-bootstrap';
 
 function ContactForm() {
     const [formState, setFormState] = useState({ name: '', email: '', message: '' });
@@ -39,29 +41,32 @@ function ContactForm() {
     console.log(formState);
 
     return (
-        <section>
+        <Container className='contact-container'>
             <h1>Contact me</h1>
-            <form id="contact-form" onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="name">Name:</label>
-                    <input type="text" defaultValue={name} onChange={handleChange} name="name" />
-                </div>
-                <div>
-                    <label htmlFor="email">Email address:</label>
-                    <input type="email" defaultValue={email} name="email" onChange={handleChange} />
-                </div>
-                <div>
-                    <label htmlFor="message">Message:</label>
-                    <textarea name="message" defaultValue={message} onChange={handleChange} rows="5" />
-                </div>
+            <Form onSubmit={handleSubmit} >
+                <Form.Group className="mb-3" controlId="Name">
+                    <Form.Label>Name:</Form.Label>
+                    <br />
+                    <Form.Control type="text" defaultValue={name} name="name" placeholder="Name" onChange={handleChange} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1" >
+                    <Form.Label>Email address:</Form.Label>
+                    <br />
+                    <Form.Control type="email" defaultValue={email} name="email" placeholder="name@example.com" onChange={handleChange} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1" >
+                    <Form.Label>Message:</Form.Label>
+                    <br />
+                    <Form.Control as="textarea" placeholder="Message" defaultValue={message} name="message" rows={3} onChange={handleChange} />
+                </Form.Group>
                 {errorMessage && (
                     <div>
                         <p className="error-text">{errorMessage}</p>
                     </div>
                 )}
                 <button type="submit">Submit</button>
-            </form>
-        </section>
+            </Form>
+        </Container>
     );
 
 }
