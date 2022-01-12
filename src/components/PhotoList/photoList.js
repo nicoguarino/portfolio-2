@@ -19,9 +19,9 @@ const PhotoList = () => {
             gitRepo: 'https://github.com/nicoguarino/budget-tracker.git',
         },
         {
-            name: 'Daily Moods',
-            deployedWebsite: 'https://nicoguarino.github.io/dailymoods/',
-            gitRepo: 'https://github.com/nicoguarino/dailymoods.git',
+            name: 'Black Bear Bakery',
+            deployedWebsite: 'https://black-bear-bakery.herokuapp.com/',
+            gitRepo: 'https://github.com/nicoguarino/Black-Bear-Bakery.git',
         },
         {
             name: 'Just a Tech Blog',
